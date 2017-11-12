@@ -139,7 +139,7 @@ int main(int argc, char** argv) {
   std::string text1 = readInputFile(argv[1]);
   std::string text2 = readInputFile(argv[2]);
   int stopwordsSize;
-  std::string *stopwords = readStopwordsFile(
+  std::string* stopwords = readStopwordsFile(
     argc > 4 ? argv[4] : DEFAULT_STOPWORDS, stopwordsSize);
   preprocess(text1);
   preprocess(text2);
