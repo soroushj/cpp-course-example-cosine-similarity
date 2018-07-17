@@ -7,7 +7,7 @@
 
 const int MAX_STOPWORDS = 200;
 const int MAX_TOKENS = 400;
-const char* DEFAULT_STOPWORDS = "stopwords.txt";
+const char* DEFAULT_STOPWORDS_FILENAME = "stopwords.txt";
 const char* CHARS_TO_REMOVE = ".,:;\"()";
 
 std::string readInputFile(const char* filename) {
@@ -140,7 +140,7 @@ int main(int argc, char** argv) {
   std::string text2 = readInputFile(argv[2]);
   int stopwordsSize;
   std::string* stopwords = readStopwordsFile(
-    argc > 4 ? argv[4] : DEFAULT_STOPWORDS, stopwordsSize);
+    argc > 4 ? argv[4] : DEFAULT_STOPWORDS_FILENAME, stopwordsSize);
   preprocess(text1);
   preprocess(text2);
   int tokens1Size;
